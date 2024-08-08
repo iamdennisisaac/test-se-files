@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructions | Review Page</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+    :root {
+      --primary: #149167;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary);
+      margin: 0;
+    }
+
+    section#note {
+      background-color: #ffffff;
+      margin: 0 10vw;
+      padding: 1rem 2rem;
+    }
+
+    section#note>section {
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      border-left: 5px solid #ccc;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ol,
+    ul {
+      line-height: 1.5;
+    }
+
+    li {
+      margin: 1rem 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid black;
+    }
+
+    h3 {
+      color: var(--primary)
+    }
+
+    span.label {
+      background-color: var(--primary);
+      padding: 0 10px;
+      color: white;
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    span.important-tag {
+      background-color: #ff0000;
+      padding: 0 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    p.important-tag {
+      background-color: #ff0000;
+      padding: 0 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    span.important {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    div#image-container img {
+      height: 300px;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+
+    code,
+    pre {
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #ccc;
+      padding: 0 5px;
+    }
+
+    p.muted {
+      color: #777;
+      margin-top: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      section#note {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="note">
+    <header>
+      <h1>Instructions for Senior UI/UX Engineer Technical Assessment</h1>
+      <p><span class="label">Goal</span>Recreate the following review page using the provided data and images.
+      </p>
+      <p><span class="label">Score</span>Out of 50 - for code quality, fidelity, animations, a few questions and
+        overall design.</p>
+      <p><span class="label">Maximum Time</span>4 hours</p>
+      <div id="image-container">
+        <img src="./images/image_1.gif" alt="ClimateCompare dashboard without data" width="500">
+        <p class="muted">Image credits to <a
+            href="https://dribbble.com/shots/4332677-Review-Page-Interaction">MindInventory Graphics</a></p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Project Details</h2>
+      <h3>Description</h3>
+      <ul>
+        <li>You'll be designing a simple review page as depicted on the image below. The image has been labelled from
+          <span class="important-tag">A</span>
+          through <span class="important-tag">F</span> to help you understand the key components you need to build to
+          complete this assessment:
+          <ul>
+            <img src="./images/image_2.png" width="1200px" style="margin-top: 30px;">
+            <li><span class="important-tag">Labelled A</span> A background with a bubble pattern, with at least 4
+              circles of different radii and color.</li>
+            <li><span class="important-tag">Labelled B</span> A section depicted like a phone, with rounded edges and a
+              light drop shadow.</li>
+            <li><span class="important-tag">Labelled C</span> A status bar with the current time (using JavaScript),
+              cellular signal strength bars, WiFi signal strength bars and a battery display.</li>
+            <li><span class="important-tag">Labelled D</span> A textbox with the message "How was your experience with
+              us".</li>
+            <li><span class="important-tag">Labelled E</span> An SVG-based feedback face, that morphs into four possible
+              faces based on the selected rating (i.e. BAD, GOOD, UHG and OK) (see the image at the top of this page for
+              reference to the animation)</li>
+            <li><span class="important-tag">Labelled E</span> An clickable wheel that allows the user to select their
+              rating, which causes the wheel to spin on its origin and morph the feedback face SVG into the different
+              emotions. This should also cause the respective colors associated with each rating to change.</li>
+            <li><span class="important-tag">Labelled F</span> A submit button with the text "Submit" - whose color
+              should change smoothly the respective rating.</li>
+          </ul>
+        </li>
+        <li>You will only have to implement the aforementioned <b>animation and transition</b> functionality (see the
+          image at the top of this page for reference) <b>as a single static webpage</b>. No logic or submission
+          handling is required.</li>
+        </li>
+      </ul>
+
+      <h3>Tech Stack</h3>
+      <ul>
+        <li><span class="label">Languages</span>HTML, CSS and JavaScript & jQuery (feel free to use additional animation
+          libraries).</li>
+        <li><span class="label">Version Control</span>Git and Github is used to host this project's respository and
+          for submitting your work.</li>
+        <li>Since this assessment will primarily use Git & GitHub, you will need <b>a GitHub account</b> and some
+          experience working with the Git CLI.</li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h2>Task 1 - Setting up your development environment</h2>
+      <ol>
+        <li>Fork <a href="https://github.com/amresh-is-cool/climate-compare">this GitHub respository</a> onto your
+          personal GitHub account and <b>clone
+            it
+            to your machine</b> - this folder contains the skeleton for the project you will
+          be
+          working on. <span class="important">The time allocation (max. 4 hours) will start from the point you fork this
+            repository.</span></li>
+        <li>Navigate to this repo's folder from your machine. Inside this folder you see a single folder named
+          <code>src/</code>. This is where you will spend your time writing designing and code.
+          You can ignore the folder named <code>/instructions</code>.
+        <li>Open the repo's folder using your favorite text editor / IDE.</li>
+        <li>Use the provided:
+          <ul>
+            <li><code>index.html</code> file for adding your structural and semantic elements.</li>
+            <li><code>styles.css</code> file for adding your styles (you may use Sass instead).</li>
+            <li><code>script.js</code> file for adding any associated JavaScript / jQuery code.</li>
+            <li><code>README.md</code> file to answer a few UI/UX questions found in <b>Task 3</b>.</li>
+          </ul>
+        </li>
+        <li>You may add additional files to this folder depending on any additional frameworks you need to complete the
+          assessment.</li>
+        </li>
+        <span class="important">Task 1 is now complete. You may now move on to Task 2.</span>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Task 2 - Completing the review page</h2>
+      <span class="label">40 marks</span>
+      <ol>
+        <li>Open the <code>index.html</code> file and complete the structural and semantic elements for the review page
+          as described in the previous section.</li>
+        </li>
+        <li>Open the <code>styles.css</code> file and complete the styles for the review page as described in the
+          previous section. Feel free to use any additional frameworks or libraries to help you with this task.</li>
+        <li>Open the <code>script.js</code> file and complete the JavaScript / jQuery code for the review page as
+          described in the
+          previous section. Feel free to use any additional frameworks or libraries to help you with this task.</li>
+        <p>Note that our focus here is your <b>animation and design</b> skills - hence, there's no need to be
+          restricted to the provided design, as long as the required functionality has been met.</p>
+        <span class="important">Task 2 is now complete. Commit and push your work to your personal forked
+          repository. You may now move on to Task 3.</span>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Task 3 - Answer a few UI/UX questions</h2>
+      <span class="label">10 marks</span>
+      <ol>
+        <li>Open <code>README.md</code> and answer the following questions regarding UI/UX:
+          <ol type="i">
+            <li>Write a small description about <b>your favorite piece of UI/UX design</b> (maybe even provide a link to
+              it for us to check out!)</li>
+            <li>As a UI/UX designer, how would you respond to <b>negative feedback</b> about your designs?</li>
+            <li>What do you think of the review page you just designed? Is it something you like, or is there anything
+              you would change?</li>
+          </ol>
+        </li>
+      </ol>
+      <p class="important-tag">Congratulations on completing this assessment! You may now submit a pull request
+        (ensuring that all local changes have been pushed) to the main repository from your forked repository to confirm
+        your submission.
+      </p>
+      <p class="important-tag">Make sure to include your name in the pull request message, along with any additional
+        details in your README.md if you wish to explain / comment on any of the solutions for the previous tasks.</p>
+    </section>
+  </section>
+</body>
+
+</html>
